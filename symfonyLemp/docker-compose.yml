@@ -1,0 +1,19 @@
+version: "3"
+services:
+  nginx:
+    image: nginx
+    ports:
+      - 80:80
+    volumes:
+      - ./nginx/symfony.conf:/etc/nginx/conf.d/symfony.conf
+      - ./symfony:/app/symfony
+
+  
+  app:
+    build: app
+    ports:
+      - 8000:8000
+    volumes:
+      - ./app/entrypoint.sh:/entrypoint.sh
+      - ./symfony:/app/symfony
+      - ./app/www.conf:/etc/php/8.2/fpm/pool.d/www.conf
