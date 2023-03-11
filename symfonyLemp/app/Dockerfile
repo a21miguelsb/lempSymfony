@@ -27,8 +27,8 @@ RUN mv /root/.symfony5/bin/symfony /usr/local/bin/symfony
 
 WORKDIR /app/symfony
 
-RUN git config --global user.email "a21migulsb@iessanclemente.net"
-RUN git config --global user.name "Miguel"
+RUN git config --global user.email "a21miguelsb@iessanclemente.net"
+RUN git config --global user.name "a21miguelsb"
 
 EXPOSE 9000
 EXPOSE 8000

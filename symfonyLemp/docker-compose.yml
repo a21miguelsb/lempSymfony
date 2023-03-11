@@ -14,6 +14,6 @@ services:
     ports:
       - 8000:8000
     volumes:
-      - ./app/entrypoint.sh:/entrypoint.sh
+      - ./app/entrypoint-dev.sh:/entrypoint.sh
       - ./symfony:/app/symfony
       - ./app/www.conf:/etc/php/8.2/fpm/pool.d/www.conf
